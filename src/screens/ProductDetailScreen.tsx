@@ -81,19 +81,33 @@ export const ProductDetailScreen = () => {
         </View>
 
         {/* Ingredients Section */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Ingredients</Text>
-          {product.ingredients.length > 0 ? (
-            product.ingredients.map(ingredient => (
-              <IngredientItem key={ingredient.id} ingredient={ingredient} />
-            ))
-          ) : (
-            <Text style={styles.emptyText}>No ingredient data available.</Text>
-          )}
-        </View>
+        {product.isPartialData ? (
+          <View style={styles.section}>
+            <View style={styles.upsellContainer}>
+              <Text style={styles.upsellTitle}>Health Data Unavailable</Text>
+              <Text style={styles.upsellText}>
+                We found this product, but no health information is available. Upgrade to Premium to scan the ingredient label directly with AI.
+              </Text>
+              <TouchableOpacity style={styles.premiumButton}>
+                <Text style={styles.premiumButtonText}>✨ Scan with AI (Premium)</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        ) : (
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Ingredients</Text>
+            {product.ingredients.length > 0 ? (
+              product.ingredients.map(ingredient => (
+                <IngredientItem key={ingredient.id} ingredient={ingredient} />
+              ))
+            ) : (
+              <Text style={styles.emptyText}>No ingredient data available.</Text>
+            )}
+          </View>
+        )}
 
         {/* Alternatives Section (If score is not excellent and alternatives exist) */}
-        {product.score < 75 && product.alternatives && product.alternatives.length > 0 && (
+        {product.score !== null && product.score < 75 && product.alternatives && product.alternatives.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Healthier Alternatives</Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.alternativesScroll}>
@@ -247,5 +261,44 @@ const styles = StyleSheet.create({
     color: colors.text,
     marginBottom: spacing.sm,
     height: 40,
+  },
+  upsellContainer: {
+    backgroundColor: '#FFF0F5',
+    padding: spacing.lg,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#FFB6C1',
+    alignItems: 'center',
+  },
+  upsellTitle: {
+    fontSize: typography.sizes.lg,
+    fontWeight: typography.weights.bold,
+    color: '#D81B60',
+    marginBottom: spacing.sm,
+  },
+  upsellText: {
+    fontSize: typography.sizes.sm,
+    color: colors.text,
+    textAlign: 'center',
+    marginBottom: spacing.lg,
+    lineHeight: 20,
+  },
+  premiumButton: {
+    backgroundColor: '#D81B60',
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
+    borderRadius: 25,
+    width: '100%',
+    alignItems: 'center',
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+  },
+  premiumButtonText: {
+    color: '#fff',
+    fontWeight: typography.weights.bold,
+    fontSize: typography.sizes.md,
   }
 });

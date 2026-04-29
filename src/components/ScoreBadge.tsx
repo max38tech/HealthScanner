@@ -3,18 +3,20 @@ import { View, Text, StyleSheet } from 'react-native';
 import { colors, typography } from '../theme/colors';
 
 interface ScoreBadgeProps {
-  score: number;
+  score: number | null;
   size?: 'small' | 'large';
 }
 
-export const getScoreColor = (score: number) => {
+export const getScoreColor = (score: number | null) => {
+  if (score === null) return colors.textLight;
   if (score >= 75) return colors.score.excellent;
   if (score >= 50) return colors.score.good;
   if (score >= 25) return colors.score.poor;
   return colors.score.bad;
 };
 
-export const getScoreLabel = (score: number) => {
+export const getScoreLabel = (score: number | null) => {
+  if (score === null) return 'Unavailable';
   if (score >= 75) return 'Excellent';
   if (score >= 50) return 'Good';
   if (score >= 25) return 'Poor';
@@ -28,9 +30,9 @@ export const ScoreBadge: React.FC<ScoreBadgeProps> = ({ score, size = 'small' })
   return (
     <View style={[styles.container, { backgroundColor: color }, isLarge && styles.containerLarge]}>
       <Text style={[styles.scoreText, isLarge && styles.scoreTextLarge]}>
-        {score}
+        {score !== null ? score : '?'}
       </Text>
-      <Text style={styles.scoreMax}>/100</Text>
+      {score !== null && <Text style={styles.scoreMax}>/100</Text>}
     </View>
   );
 };
