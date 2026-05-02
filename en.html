@@ -23,43 +23,42 @@
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="https://iteratori.io" class="nav-btn">About Us</a></li>
-            </ul>
-            <div class="nav-actions">
-                <div class="lang-switcher">
+                <li><a href="#download" class="btn btn-primary">Download</a></li>
+                <li class="lang-switcher">
                     <a href="index.html" class="lang-link">JP</a>
-                    <span class="lang-divider">|</span>
-                    <a href="#" class="lang-link active">EN</a>
-                </div>
-                <a href="#download" class="download-btn">Download</a>
-            </div>
-            <button class="mobile-menu-btn">
+                </li>
+            </ul>
+            <div class="mobile-menu-btn">
                 <i data-lucide="menu"></i>
-            </button>
+            </div>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="container hero-content">
+        <div class="container hero-grid">
             <div class="hero-text">
                 <span class="badge">Health Management App for Japan</span>
                 <h1>Understand what you eat,<br><span class="text-gradient">in much more detail.</span></h1>
                 <p>Genkimi analyzes food nutrients and additives just by scanning a barcode, providing an instant health score.</p>
                 <div class="hero-btns">
-                    <a href="#download" class="btn btn-primary">Start for Free</a>
-                    <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
+                    <a href="#" class="store-btn">
+                        <i data-lucide="apple"></i>
+                        <div>
+                            <span>Download on the</span>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="store-btn">
+                        <i data-lucide="play"></i>
+                        <div>
+                            <span>GET IT ON</span>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="hero-visual">
                 <img src="assets/mockup.png" alt="Genkimi App Mockup" class="mockup-img">
-                <div class="floating-card card-1">
-                    <i data-lucide="bar-chart-3"></i>
-                    <span>Nutri-Score A</span>
-                </div>
-                <div class="floating-card card-2">
-                    <i data-lucide="shield-check"></i>
-                    <span>Additive Free</span>
-                </div>
             </div>
         </div>
     </header>
@@ -158,7 +157,9 @@
 
     <script src="script.js"></script>
     <script>
-        lucide.createIcons();
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     </script>
 </body>
 </html>
