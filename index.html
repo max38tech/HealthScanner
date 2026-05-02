@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genkimi | あなたの健康をスキャンする</title>
+    <meta name="description" content="Genkimiは、バーコードをスキャンするだけで食品の健康度を瞬時に判定するアプリです。日本の市場に特化し、より健康的な選択をサポートします。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="../index.html" class="logo">
+                <i data-lucide="leaf" class="logo-icon"></i>
+                <span>Genkimi</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features" data-i18n="nav_features">機能</a></li>
+                <li><a href="#how-it-works" data-i18n="nav_how_it_works">使い方</a></li>
+                <li><a href="#download" class="btn btn-primary" data-i18n="nav_download">ダウンロード</a></li>
+                <li class="lang-switcher">
+                    <button id="lang-toggle" class="lang-btn">
+                        <span class="current-lang">JP</span>
+                        <i data-lucide="languages"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="badge" data-i18n="hero_badge">日本市場向け健康管理アプリ</span>
+                <h1 data-i18n="hero_title">食べているものを、<br><span class="text-gradient">もっと詳しく知る。</span></h1>
+                <p data-i18n="hero_description">Genkimiは、バーコードをスキャンするだけで食品の栄養成分や添加物を解析し、独自のスコアで健康度をお知らせします。</p>
+                <div class="store-buttons">
+                    <a href="#" class="store-btn apple">
+                        <i data-lucide="apple"></i>
+                        <div>
+                            <span>Download on the</span>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="store-btn google">
+                        <i data-lucide="play"></i>
+                        <div>
+                            <span>GET IT ON</span>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="mockup-container">
+                    <img src="assets/mockup.png" alt="Genkimi App Mockup" class="mockup-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="features_title">主な機能</h2>
+                <p data-i18n="features_subtitle">健康な食生活をサポートするための強力なツール</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="scan"></i></div>
+                    <h3 data-i18n="feat_1_title">高速スキャン</h3>
+                    <p data-i18n="feat_1_desc">JANコードを瞬時に読み取り。日本国内の膨大なデータベースから食品情報を取得します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
+                    <h3 data-i18n="feat_2_title">独自の健康スコア</h3>
+                    <p data-i18n="feat_2_desc">Nutri-Scoreや添加物情報を基に、食品を4段階で評価。一目で良し悪しがわかります。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+                    <h3 data-i18n="feat_3_title">添加物チェック</h3>
+                    <p data-i18n="feat_3_desc">注意が必要な添加物をハイライト。成分表示を読む手間を省きます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="sparkles"></i></div>
+                    <h3 data-i18n="feat_4_title">AIラベル解析</h3>
+                    <p data-i18n="feat_4_desc">データベースにない商品でも、AIが原材料表示の写真を読み取って解析します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="how-grid">
+                <div class="how-image">
+                    <img src="assets/hero.png" alt="Healthy Food" class="rounded-image">
+                </div>
+                <div class="how-content">
+                    <h2 data-i18n="how_title">使い方はとても簡単</h2>
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div>
+                            <h4 data-i18n="step_1_title">アプリを開いてスキャン</h4>
+                            <p data-i18n="step_1_desc">スーパーでの買い物中、気になる商品のバーコードにかざすだけ。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div>
+                            <h4 data-i18n="step_2_title">内容をチェック</h4>
+                            <p data-i18n="step_2_desc">スコア、栄養バランス、添加物の詳細を瞬時に確認。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div>
+                            <h4 data-i18n="step_3_title">より良い選択を</h4>
+                            <p data-i18n="step_3_desc">より健康的な代替商品の提案も受けられます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="download" class="footer">
+        <div class="container">
+            <div class="footer-cta">
+                <h2 data-i18n="footer_cta_title">今すぐ健康な選択を始めましょう</h2>
+                <p data-i18n="footer_cta_desc">Genkimiをダウンロードして、毎日の食事をアップデート。</p>
+                <div class="store-buttons centered">
+                    <a href="#" class="store-btn apple">
+                        <i data-lucide="apple"></i>
+                        <div>
+                            <span>Download on the</span>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="store-btn google">
+                        <i data-lucide="play"></i>
+                        <div>
+                            <span>GET IT ON</span>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a href="../index.html" class="logo">
+                    <i data-lucide="leaf"></i>
+                    <span>Genkimi</span>
+                </a>
+                <p>&copy; 2026 Genkimi Inc. All rights reserved. <span class="footer-divider">|</span> <a href="../index.html" class="created-by">Created by Iteratori</a></p>
+                <div class="social-links">
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
