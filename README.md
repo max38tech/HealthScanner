@@ -1,6 +1,6 @@
-# 🍱 HealthScanner (Japanese Market Edition)
+# 🍱 Genkimi (Japanese Market Edition)
 
-HealthScanner is a cross-platform mobile application built with React Native and Expo, designed to help users make healthier food choices. Tailored specifically for the Japanese market, it allows users to scan product barcodes (JAN codes) to instantly see a health score, ingredient breakdown, and healthier alternatives.
+Genkimi is a cross-platform mobile application built with React Native and Expo, designed to help users make healthier food choices. Tailored specifically for the Japanese market, it allows users to scan product barcodes (JAN codes) to instantly see a health score, ingredient breakdown, and healthier alternatives.
 
 ## ✨ Features
 
@@ -38,8 +38,8 @@ EXPO_PUBLIC_RAKUTEN_APP_ID=your_rakuten_app_id_here
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/HealthScanner.git
-    cd HealthScanner
+    git clone https://github.com/yourusername/Genkimi.git
+    cd Genkimi
     ```
 
 2.  Install dependencies:
