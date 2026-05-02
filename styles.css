@@ -208,6 +208,8 @@ body {
     text-decoration: none;
     transition: var(--transition);
     border: 1px solid transparent;
+    width: fit-content;
+    min-width: 170px;
 }
 
 .store-btn:hover {
